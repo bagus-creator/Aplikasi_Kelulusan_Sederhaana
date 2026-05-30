@@ -1,0 +1,122 @@
+[
+  {
+    "nama": "Ahmad Fauzi",
+    "nisn": "1000000001",
+    "kelas": "XII RPL 1",
+    "status": "LULUS"
+  },
+  {
+    "nama": "Budi Santoso",
+    "nisn": "1000000002",
+    "kelas": "XII RPL 1",
+    "status": "LULUS"
+  },
+  {
+    "nama": "Citra Lestari",
+    "nisn": "1000000003",
+    "kelas": "XII RPL 1",
+    "status": "TIDAK LULUS"
+  },
+  {
+    "nama": "Dewi Anggraini",
+    "nisn": "1000000004",
+    "kelas": "XII RPL 1",
+    "status": "TIDAK LULUS"
+  },
+  {
+    "nama": "Eko Prasetyo",
+    "nisn": "1000000005",
+    "kelas": "XII RPL 1",
+    "status": "LULUS"
+  },
+  {
+    "nama": "Farhan Maulana",
+    "nisn": "1000000006",
+    "kelas": "XII RPL 2",
+    "status": "LULUS"
+  },
+  {
+    "nama": "Gita Permata",
+    "nisn": "1000000007",
+    "kelas": "XII RPL 2",
+    "status": "LULUS"
+  },
+  {
+    "nama": "Hendra Saputra",
+    "nisn": "1000000008",
+    "kelas": "XII RPL 2",
+    "status": "LULUS"
+  },
+  {
+    "nama": "Indah Sari",
+    "nisn": "1000000009",
+    "kelas": "XII RPL 2",
+    "status": "LULUS"
+  },
+  {
+    "nama": "Joko Susilo",
+    "nisn": "1000000010",
+    "kelas": "XII RPL 2",
+    "status": "LULUS"
+  },
+  {
+    "nama": "Kartika Putri",
+    "nisn": "1000000011",
+    "kelas": "XII TKJ 1",
+    "status": "LULUS"
+  },
+  {
+    "nama": "Lukman Hakim",
+    "nisn": "1000000012",
+    "kelas": "XII TKJ 1",
+    "status": "LULUS"
+  },
+  {
+    "nama": "Mega Puspita",
+    "nisn": "1000000013",
+    "kelas": "XII TKJ 1",
+    "status": "LULUS"
+  },
+  {
+    "nama": "Nanda Wijaya",
+    "nisn": "1000000014",
+    "kelas": "XII TKJ 1",
+    "status": "TIDAK LULUS"
+  },
+  {
+    "nama": "Oki Ramadhan",
+    "nisn": "1000000015",
+    "kelas": "XII TKJ 1",
+    "status": "LULUS"
+  },
+  {
+    "nama": "Putri Maharani",
+    "nisn": "1000000016",
+    "kelas": "XII TKJ 2",
+    "status": "LULUS"
+  },
+  {
+    "nama": "Qori Aulia",
+    "nisn": "1000000017",
+    "kelas": "XII TKJ 2",
+    "status": "TIDAK LULUS"
+  },
+  {
+    "nama": "Rizky Pratama",
+    "nisn": "1000000018",
+    "kelas": "XII TKJ 2",
+    "status": "LULUS"
+  },
+  {
+    "nama": "Siti Nurhaliza",
+    "nisn": "1000000019",
+    "kelas": "XII TKJ 2",
+    "status": "LULUS"
+  },
+  {
+    "nama": "Taufik Hidayat",
+    "nisn": "1000000020",
+    "kelas": "XII TKJ 2",
+    "status": "LULUS"
+  }
+]
