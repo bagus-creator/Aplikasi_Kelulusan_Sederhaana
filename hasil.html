@@ -44,187 +44,19 @@
     </main>
 
     <script>
-      async function cekKelulusan() {
-        const namaInput = localStorage.getItem("nama");
-        const nisnInput = localStorage.getItem("nisn");
-
+     async function cekKelulusan() {
+    try {
         const response = await fetch("data/siswa.json");
         const data = await response.json();
 
-        const siswa = data.find(
-          (item) =>
-            item.nama.toLowerCase() === namaInput.toLowerCase() &&
-            item.nisn === nisnInput,
-        );
+        console.log(data);
+    } catch(error) {
+        console.error(error);
 
-        const hasil = document.getElementById("hasil");
-
-        if (siswa.status === "LULUS") {
-          hasil.innerHTML = `
-                    <div class="text-center">
-
-                        <div class="text-7xl mb-4">
-                            🎓
-                        </div>
-
-                        <h1 class="text-4xl font-bold text-green-600 mb-2">
-                            SELAMAT!
-                        </h1>
-
-                        <p class="text-slate-600 mb-8">
-                            Anda dinyatakan lulus.
-                        </p>
-
-                    </div>
-
-                    <div class="border rounded-xl overflow-hidden">
-
-                        <table class="w-full">
-
-                            <tr class="border-b">
-                                <td class="p-4 font-semibold bg-slate-50">
-                                    Nama
-                                </td>
-                                <td class="p-4">
-                                    ${siswa.nama}
-                                </td>
-                            </tr>
-
-                            <tr class="border-b">
-                                <td class="p-4 font-semibold bg-slate-50">
-                                    NISN
-                                </td>
-                                <td class="p-4">
-                                    ${siswa.nisn}
-                                </td>
-                            </tr>
-
-                            <tr class="border-b">
-                                <td class="p-4 font-semibold bg-slate-50">
-                                    Kelas
-                                </td>
-                                <td class="p-4">
-                                    ${siswa.kelas}
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="p-4 font-semibold bg-slate-50">
-                                    Status
-                                </td>
-                                <td class="p-4 text-green-600 font-bold">
-                                    ${siswa.status}
-                                </td>
-                            </tr>
-
-                        </table>
-
-                    </div>
-
-                    <div class="mt-8 text-center">
-
-                        <a href="index.html"
-                           class="inline-block bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800">
-                            Kembali
-                        </a>
-
-                    </div>
-                `;
-        } else if (siswa.status === "TIDAK LULUS") {
-          hasil.innerHTML = ` <div class="text-center">
-
-                        <div class="text-7xl mb-4">
-                            🙏
-                        </div>
-
-                        <h1 class="text-4xl font-bold text-red-600 mb-2">
-                            MOHON MAAF
-                        </h1>
-
-                        <p class="text-slate-600 mb-8">
-                            Anda dinyatakan Tidak lulus.
-                        </p>
-
-                    </div>
-
-                    <div class="border rounded-xl overflow-hidden">
-
-                        <table class="w-full">
-
-                            <tr class="border-b">
-                                <td class="p-4 font-semibold bg-slate-50">
-                                    Nama
-                                </td>
-                                <td class="p-4">
-                                    ${siswa.nama}
-                                </td>
-                            </tr>
-
-                            <tr class="border-b">
-                                <td class="p-4 font-semibold bg-slate-50">
-                                    NISN
-                                </td>
-                                <td class="p-4">
-                                    ${siswa.nisn}
-                                </td>
-                            </tr>
-
-                            <tr class="border-b">
-                                <td class="p-4 font-semibold bg-slate-50">
-                                    Kelas
-                                </td>
-                                <td class="p-4">
-                                    ${siswa.kelas}
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="p-4 font-semibold bg-slate-50">
-                                    Status
-                                </td>
-                                <td class="p-4 text-red-600 font-bold">
-                                    ${siswa.status}
-                                </td>
-                            </tr>
-
-                        </table>
-
-                    </div>
-
-                    <div class="mt-8 text-center">
-
-                        <a href="index.html"
-                           class="inline-block bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800">
-                            Kembali
-                        </a>
-
-                    </div>
-                `;
-        } else {
-          hasil.innerHTML = `
-                    <div class="text-center">
-
-                        <div class="text-7xl mb-4">
-                            ❌
-                        </div>
-
-                        <h1 class="text-3xl font-bold text-red-600 mb-3">
-                            Data Tidak Ditemukan
-                        </h1>
-
-                        <p class="text-slate-600 mb-8">
-                            Nama atau NISN yang dimasukkan tidak sesuai.
-                        </p>
-
-                        <a href="index.html"
-                           class="inline-block bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800">
-                            Kembali
-                        </a>
-
-                    </div>
-                `;
-        }
-      }
+        document.getElementById("hasil").innerHTML =
+        "<h2>Gagal membaca data siswa</h2>";
+    }
+}
 
       cekKelulusan();
     </script>
