@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pengumuman Kelulusan</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-slate-100">
+    <!-- Navbar -->
+    <nav class="bg-blue-700 shadow-lg">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center gap-3">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyOE9-T4GMjYjEqpmCgiWbmV4mC3cpuqDeuA&s"
+              alt="Logo Sekolah"
+              class="w-10 h-10 rounded-full bg-white p-1"
+            />
+
+            <div class="text-white">
+              <h1 class="font-bold">SMK Contoh Indonesia</h1>
+              <p class="text-xs text-blue-100">Tahun Ajaran 2025/2026</p>
+            </div>
+          </div>
+
+          <div class="text-white text-sm">Pengumuman Kelulusan</div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Content -->
+    <main
+      class="min-h-[calc(100vh-64px)] flex items-center justify-center px-4"
+    >
+      <div class="w-full max-w-md">
+        <div class="bg-white rounded-2xl shadow-xl p-8">
+          <div class="text-center mb-6">
+            <h2 class="text-3xl font-bold text-slate-800">
+              Pengumuman Kelulusan
+            </h2>
+
+            <p class="text-slate-500 mt-2">
+              Silakan masukkan Nama dan NISN untuk melihat hasil kelulusan.
+            </p>
+          </div>
+
+          <form id="formKelulusan" class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium mb-2">
+                Nama Lengkap
+              </label>
+
+              <input
+                type="text"
+                id="nama"
+                class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Masukkan nama lengkap"
+                required
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2"> NISN </label>
+
+              <input
+                type="text"
+                id="nisn"
+                class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Masukkan NISN"
+                required
+              />
+            </div>
+
+            <button
+              type="submit"
+              class="w-full bg-blue-700 hover:bg-blue-800 text-white py-3 rounded-lg font-semibold transition"
+            >
+              Cek Kelulusan
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      document
+        .getElementById("formKelulusan")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const nama = document.getElementById("nama").value.trim();
+          const nisn = document.getElementById("nisn").value.trim();
+
+          localStorage.setItem("nama", nama);
+          localStorage.setItem("nisn", nisn);
+
+          window.location.href = "hasil.html";
+        });
+    </script>
+  </body>
+</html>
