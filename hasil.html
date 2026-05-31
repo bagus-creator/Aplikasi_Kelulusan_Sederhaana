@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="id">
 <head>
@@ -43,23 +44,25 @@
   </nav>
 
   <!-- Content -->
-  <main
-    class="flex-1 flex items-center justify-center px-4 py-6"
-  >
-    <div class="w-full max-w-4xl">
+  <main class="flex-1 flex items-center justify-center px-4 py-6">
+
+    <div class="w-full max-w-2xl">
 
       <div
         id="hasil"
-        class="bg-white rounded-2xl shadow-xl p-5 sm:p-8"
+        class="bg-white rounded-2xl shadow-xl p-4 sm:p-6"
       >
+
         <div class="text-center">
           <h2 class="text-2xl font-bold text-slate-700">
             Memeriksa Data...
           </h2>
         </div>
+
       </div>
 
     </div>
+
   </main>
 
   <!-- Footer -->
@@ -70,9 +73,11 @@
   </footer>
 
   <script>
+
     async function cekKelulusan() {
 
-      const hasil = document.getElementById("hasil");
+      const hasil =
+        document.getElementById("hasil");
 
       try {
 
@@ -105,21 +110,21 @@
           hasil.innerHTML = `
             <div class="text-center">
 
-              <div class="text-7xl mb-4">
+              <div class="text-5xl mb-4">
                 ❌
               </div>
 
-              <h1 class="text-3xl font-bold text-red-600 mb-3">
+              <h1 class="text-2xl font-bold text-red-600 mb-3">
                 Data Tidak Ditemukan
               </h1>
 
-              <p class="text-slate-600 mb-8">
+              <p class="text-slate-600 mb-6">
                 NISN tidak terdaftar pada sistem.
               </p>
 
               <a
                 href="index.html"
-                class="inline-block w-full sm:w-auto bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800"
+                class="inline-block bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800"
               >
                 Kembali
               </a>
@@ -130,7 +135,7 @@
           return;
         }
 
-        // Nama tidak cocok
+        // Verifikasi nama
         if (
           siswa.nama.toLowerCase().trim() !==
           namaInput?.toLowerCase().trim()
@@ -139,21 +144,21 @@
           hasil.innerHTML = `
             <div class="text-center">
 
-              <div class="text-7xl mb-4">
+              <div class="text-5xl mb-4">
                 ⚠️
               </div>
 
-              <h1 class="text-3xl font-bold text-amber-600 mb-3">
+              <h1 class="text-2xl font-bold text-amber-600 mb-3">
                 Verifikasi Gagal
               </h1>
 
-              <p class="text-slate-600 mb-8">
+              <p class="text-slate-600 mb-6">
                 Nama tidak sesuai dengan NISN yang dimasukkan.
               </p>
 
               <a
                 href="index.html"
-                class="inline-block w-full sm:w-auto bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800"
+                class="inline-block bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800"
               >
                 Kembali
               </a>
@@ -181,113 +186,80 @@
 
         const pesanStatus =
           siswa.status === "LULUS"
-            ? "Anda dinyatakan LULUS."
-            : "Anda dinyatakan TIDAK LULUS.";
+            ? "Anda dinyatakan LULUS"
+            : "Anda dinyatakan TIDAK LULUS";
 
         hasil.innerHTML = `
 
           <div class="text-center mb-8">
 
-            <div class="text-7xl mb-4">
+            <div class="text-5xl sm:text-6xl mb-3">
               ${iconStatus}
             </div>
 
-            <h1 class="text-3xl sm:text-4xl font-bold ${warnaStatus} mb-2">
+            <h1 class="text-2xl sm:text-3xl font-bold ${warnaStatus}">
               ${judulStatus}
             </h1>
 
-            <p class="text-slate-600">
+            <p class="text-slate-600 mt-2">
               ${pesanStatus}
             </p>
 
           </div>
 
-          <div class="border rounded-xl overflow-hidden overflow-x-auto">
+          <div class="space-y-3">
 
-            <table class="w-full min-w-[600px]">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b pb-3">
+              <div class="font-semibold text-slate-600">Nomor Urut</div>
+              <div class="sm:col-span-2">${siswa.no}</div>
+            </div>
 
-              <tr class="border-b">
-                <td class="bg-slate-50 p-4 font-semibold">
-                  Nomor Urut
-                </td>
-                <td class="p-4">
-                  ${siswa.no}
-                </td>
-              </tr>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b pb-3">
+              <div class="font-semibold text-slate-600">Nama Lengkap</div>
+              <div class="sm:col-span-2 break-words">${siswa.nama}</div>
+            </div>
 
-              <tr class="border-b">
-                <td class="bg-slate-50 p-4 font-semibold">
-                  Nama Lengkap
-                </td>
-                <td class="p-4">
-                  ${siswa.nama}
-                </td>
-              </tr>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b pb-3">
+              <div class="font-semibold text-slate-600">NIPD</div>
+              <div class="sm:col-span-2">${siswa.nipd}</div>
+            </div>
 
-              <tr class="border-b">
-                <td class="bg-slate-50 p-4 font-semibold">
-                  NIPD
-                </td>
-                <td class="p-4">
-                  ${siswa.nipd}
-                </td>
-              </tr>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b pb-3">
+              <div class="font-semibold text-slate-600">NISN</div>
+              <div class="sm:col-span-2">${siswa.nisn}</div>
+            </div>
 
-              <tr class="border-b">
-                <td class="bg-slate-50 p-4 font-semibold">
-                  NISN
-                </td>
-                <td class="p-4">
-                  ${siswa.nisn}
-                </td>
-              </tr>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b pb-3">
+              <div class="font-semibold text-slate-600">Jenis Kelamin</div>
+              <div class="sm:col-span-2">
+                ${siswa.jk === "L" ? "Laki-Laki" : "Perempuan"}
+              </div>
+            </div>
 
-              <tr class="border-b">
-                <td class="bg-slate-50 p-4 font-semibold">
-                  Jenis Kelamin
-                </td>
-                <td class="p-4">
-                  ${siswa.jk === "L" ? "Laki-Laki" : "Perempuan"}
-                </td>
-              </tr>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b pb-3">
+              <div class="font-semibold text-slate-600">Tempat Lahir</div>
+              <div class="sm:col-span-2">${siswa.tempat_lahir}</div>
+            </div>
 
-              <tr class="border-b">
-                <td class="bg-slate-50 p-4 font-semibold">
-                  Tempat Lahir
-                </td>
-                <td class="p-4">
-                  ${siswa.tempat_lahir}
-                </td>
-              </tr>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b pb-3">
+              <div class="font-semibold text-slate-600">Tanggal Lahir</div>
+              <div class="sm:col-span-2">${siswa.tanggal_lahir}</div>
+            </div>
 
-              <tr class="border-b">
-                <td class="bg-slate-50 p-4 font-semibold">
-                  Tanggal Lahir
-                </td>
-                <td class="p-4">
-                  ${siswa.tanggal_lahir}
-                </td>
-              </tr>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b pb-3">
+              <div class="font-semibold text-slate-600">NPSN</div>
+              <div class="sm:col-span-2">${siswa.npsn}</div>
+            </div>
 
-              <tr class="border-b">
-                <td class="bg-slate-50 p-4 font-semibold">
-                  NPSN
-                </td>
-                <td class="p-4">
-                  ${siswa.npsn}
-                </td>
-              </tr>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <div class="font-semibold text-slate-600">
+                Status Kelulusan
+              </div>
 
-              <tr>
-                <td class="bg-slate-50 p-4 font-semibold">
-                  Status Kelulusan
-                </td>
-                <td class="p-4 font-bold ${warnaStatus}">
-                  ${siswa.status}
-                </td>
-              </tr>
-
-            </table>
+              <div class="sm:col-span-2 font-bold ${warnaStatus}">
+                ${siswa.status}
+              </div>
+            </div>
 
           </div>
 
@@ -295,7 +267,7 @@
 
             <a
               href="index.html"
-              class="inline-block w-full sm:w-auto bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition"
+              class="inline-block bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition"
             >
               Kembali
             </a>
@@ -311,21 +283,21 @@
         hasil.innerHTML = `
           <div class="text-center">
 
-            <div class="text-7xl mb-4">
+            <div class="text-5xl mb-4">
               ⚠️
             </div>
 
-            <h1 class="text-3xl font-bold text-red-600 mb-3">
+            <h1 class="text-2xl font-bold text-red-600 mb-3">
               Terjadi Kesalahan
             </h1>
 
-            <p class="text-slate-600 mb-8">
+            <p class="text-slate-600 mb-6">
               Gagal memuat data siswa.
             </p>
 
             <a
               href="index.html"
-              class="inline-block w-full sm:w-auto bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800"
+              class="inline-block bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800"
             >
               Kembali
             </a>
@@ -336,7 +308,9 @@
     }
 
     cekKelulusan();
+
   </script>
 
 </body>
 </html>
+```
