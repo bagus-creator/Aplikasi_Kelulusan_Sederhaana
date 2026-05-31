@@ -43,11 +43,12 @@
       </div>
     </main>
 
-    <script>
+  <script>
   async function cekKelulusan() {
     const hasil = document.getElementById("hasil");
 
     try {
+      const namaInput = localStorage.getItem("nama");
       const nisnInput = localStorage.getItem("nisn");
 
       const response = await fetch("data/siswa.json");
@@ -60,6 +61,8 @@
 
       const siswa = data.find(
         (item) =>
+          item.nama.toLowerCase().trim() ===
+            namaInput?.toLowerCase().trim() &&
           item.nisn.toString().trim() ===
             nisnInput?.toString().trim()
       );
@@ -260,7 +263,6 @@
 
   cekKelulusan();
 </script>
-   
     
   </body>
 </html>
