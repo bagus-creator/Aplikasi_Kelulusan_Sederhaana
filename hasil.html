@@ -1,115 +1,257 @@
-hasil.innerHTML = `
-<div class="text-center">
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hasil Kelulusan</title>
 
-    <div class="text-7xl mb-4">
-        🎓
-    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-slate-100">
+    <!-- Navbar -->
+    <nav class="bg-blue-700 shadow-lg">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center gap-3">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyOE9-T4GMjYjEqpmCgiWbmV4mC3cpuqDeuA&s"
+              alt="Logo Sekolah"
+              class="w-10 h-10 rounded-full bg-white p-1"
+            />
 
-    <h1 class="text-4xl font-bold text-green-600 mb-2">
-        SELAMAT
-    </h1>
+            <div class="text-white">
+              <h1 class="font-bold">SMK Contoh Indonesia</h1>
+              <p class="text-xs text-blue-100">Tahun Ajaran 2025/2026</p>
+            </div>
+          </div>
 
-    <p class="text-slate-600 mb-8">
-        Anda dinyatakan ${siswa.status}
-    </p>
+          <span class="text-white text-sm"> Hasil Kelulusan </span>
+        </div>
+      </div>
+    </nav>
 
-</div>
+    <!-- Content -->
+    <main
+      class="min-h-[calc(100vh-64px)] flex items-center justify-center px-4"
+    >
+      <div class="w-full max-w-2xl">
+        <div id="hasil" class="bg-white rounded-2xl shadow-xl p-8">
+          <div class="text-center">
+            <h2 class="text-2xl font-bold text-slate-700">Memeriksa Data...</h2>
+          </div>
+        </div>
+      </div>
+    </main>
 
-<div class="overflow-hidden rounded-xl border">
+    <script>
+      async function cekKelulusan() {
+        console.log(localStorage.getItem("nama"));
+        const namaInput = localStorage.getItem("nama");
+        const nisnInput = localStorage.getItem("nisn");
 
-    <table class="w-full">
+        const response = await fetch("data/siswa.json");
+        const data = await response.json();
 
-        <tr class="border-b">
-            <td class="bg-slate-50 p-4 font-semibold">
-                Nomor Urut
-            </td>
-            <td class="p-4">
-                ${siswa.no}
-            </td>
-        </tr>
+        const siswa = data.find(
+          (item) =>
+            item.nama.toLowerCase() === namaInput.toLowerCase() &&
+            item.nisn === nisnInput,
+        );
 
-        <tr class="border-b">
-            <td class="bg-slate-50 p-4 font-semibold">
-                Nama Lengkap
-            </td>
-            <td class="p-4">
-                ${siswa.nama}
-            </td>
-        </tr>
+        const hasil = document.getElementById("hasil");
 
-        <tr class="border-b">
-            <td class="bg-slate-50 p-4 font-semibold">
-                NIPD
-            </td>
-            <td class="p-4">
-                ${siswa.nipd}
-            </td>
-        </tr>
+        if (siswa.status === "LULUS") {
+          hasil.innerHTML = `
+                    <div class="text-center">
 
-        <tr class="border-b">
-            <td class="bg-slate-50 p-4 font-semibold">
-                NISN
-            </td>
-            <td class="p-4">
-                ${siswa.nisn}
-            </td>
-        </tr>
+                        <div class="text-7xl mb-4">
+                            🎓
+                        </div>
 
-        <tr class="border-b">
-            <td class="bg-slate-50 p-4 font-semibold">
-                Jenis Kelamin
-            </td>
-            <td class="p-4">
-                ${siswa.jk === "L" ? "Laki-Laki" : "Perempuan"}
-            </td>
-        </tr>
+                        <h1 class="text-4xl font-bold text-green-600 mb-2">
+                            SELAMAT!
+                        </h1>
 
-        <tr class="border-b">
-            <td class="bg-slate-50 p-4 font-semibold">
-                Tempat Lahir
-            </td>
-            <td class="p-4">
-                ${siswa.tempat_lahir}
-            </td>
-        </tr>
+                        <p class="text-slate-600 mb-8">
+                            Anda dinyatakan lulus.
+                        </p>
 
-        <tr class="border-b">
-            <td class="bg-slate-50 p-4 font-semibold">
-                Tanggal Lahir
-            </td>
-            <td class="p-4">
-                ${siswa.tanggal_lahir}
-            </td>
-        </tr>
+                    </div>
 
-        <tr class="border-b">
-            <td class="bg-slate-50 p-4 font-semibold">
-                NPSN
-            </td>
-            <td class="p-4">
-                ${siswa.npsn}
-            </td>
-        </tr>
+                    <div class="border rounded-xl overflow-hidden">
 
-        <tr>
-            <td class="bg-slate-50 p-4 font-semibold">
-                Status Kelulusan
-            </td>
-            <td class="p-4 font-bold text-green-600">
-                ${siswa.status}
-            </td>
-        </tr>
+                        <table class="w-full">
 
-    </table>
+<tr class="border-b">
+<td class="p-4 font-semibold bg-slate-50">Nama Lengkap</td>
+<td class="p-4">${siswa.nama}</td>
+</tr>
 
-</div>
+<tr class="border-b">
+<td class="p-4 font-semibold bg-slate-50">NIPD</td>
+<td class="p-4">${siswa.nipd}</td>
+</tr>
 
-<div class="mt-8 text-center">
+<tr class="border-b">
+<td class="p-4 font-semibold bg-slate-50">NISN</td>
+<td class="p-4">${siswa.nisn}</td>
+</tr>
 
-    <a href="index.html"
-       class="inline-block bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800">
-        Kembali
-    </a>
+<tr class="border-b">
+<td class="p-4 font-semibold bg-slate-50">Jenis Kelamin</td>
+<td class="p-4">
+${siswa.jk === "L" ? "Laki-Laki" : "Perempuan"}
+</td>
+</tr>
 
-</div>
-`;
+<tr class="border-b">
+<td class="p-4 font-semibold bg-slate-50">Tempat Lahir</td>
+<td class="p-4">${siswa.tempat_lahir}</td>
+</tr>
+
+<tr class="border-b">
+<td class="p-4 font-semibold bg-slate-50">Tanggal Lahir</td>
+<td class="p-4">${siswa.tanggal_lahir}</td>
+</tr>
+
+<tr class="border-b">
+<td class="p-4 font-semibold bg-slate-50">NPSN</td>
+<td class="p-4">${siswa.npsn}</td>
+</tr>
+
+<tr>
+<td class="p-4 font-semibold bg-slate-50">Status Kelulusan</td>
+<td class="p-4 font-bold ${
+  siswa.status === "LULUS"
+    ? "text-green-600"
+    : "text-red-600"
+}">
+${siswa.status}
+</td>
+</tr>
+
+</table>
+
+                    </div>
+
+                    <div class="mt-8 text-center">
+
+                        <a href="index.html"
+                           class="inline-block bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800">
+                            Kembali
+                        </a>
+
+                    </div>
+                `;
+        } else if (siswa.status === "TIDAK LULUS") {
+          hasil.innerHTML = ` <div class="text-center">
+
+                        <div class="text-7xl mb-4">
+                            🙏
+                        </div>
+
+                        <h1 class="text-4xl font-bold text-red-600 mb-2">
+                            MOHON MAAF
+                        </h1>
+
+                        <p class="text-slate-600 mb-8">
+                            Anda dinyatakan Tidak lulus.
+                        </p>
+
+                    </div>
+
+                    <div class="border rounded-xl overflow-hidden">
+
+                       <table class="w-full">
+
+<tr class="border-b">
+<td class="p-4 font-semibold bg-slate-50">Nama Lengkap</td>
+<td class="p-4">${siswa.nama}</td>
+</tr>
+
+<tr class="border-b">
+<td class="p-4 font-semibold bg-slate-50">NIPD</td>
+<td class="p-4">${siswa.nipd}</td>
+</tr>
+
+<tr class="border-b">
+<td class="p-4 font-semibold bg-slate-50">NISN</td>
+<td class="p-4">${siswa.nisn}</td>
+</tr>
+
+<tr class="border-b">
+<td class="p-4 font-semibold bg-slate-50">Jenis Kelamin</td>
+<td class="p-4">
+${siswa.jk === "L" ? "Laki-Laki" : "Perempuan"}
+</td>
+</tr>
+
+<tr class="border-b">
+<td class="p-4 font-semibold bg-slate-50">Tempat Lahir</td>
+<td class="p-4">${siswa.tempat_lahir}</td>
+</tr>
+
+<tr class="border-b">
+<td class="p-4 font-semibold bg-slate-50">Tanggal Lahir</td>
+<td class="p-4">${siswa.tanggal_lahir}</td>
+</tr>
+
+<tr class="border-b">
+<td class="p-4 font-semibold bg-slate-50">NPSN</td>
+<td class="p-4">${siswa.npsn}</td>
+</tr>
+
+<tr>
+<td class="p-4 font-semibold bg-slate-50">Status Kelulusan</td>
+<td class="p-4 font-bold ${
+  siswa.status === "LULUS"
+    ? "text-green-600"
+    : "text-red-600"
+}">
+${siswa.status}
+</td>
+</tr>
+
+</table>
+
+                    </div>
+
+                    <div class="mt-8 text-center">
+
+                        <a href="index.html"
+                           class="inline-block bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800">
+                            Kembali
+                        </a>
+
+                    </div>
+                `;
+        } else {
+          hasil.innerHTML = `
+                    <div class="text-center">
+
+                        <div class="text-7xl mb-4">
+                            ❌
+                        </div>
+
+                        <h1 class="text-3xl font-bold text-red-600 mb-3">
+                            Data Tidak Ditemukan
+                        </h1>
+
+                        <p class="text-slate-600 mb-8">
+                            Nama atau NISN yang dimasukkan tidak sesuai.
+                        </p>
+
+                        <a href="index.html"
+                           class="inline-block bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800">
+                            Kembali
+                        </a>
+
+                    </div>
+                `;
+        }
+      }
+
+      cekKelulusan();
+    </script>
+  </body>
+</html>
