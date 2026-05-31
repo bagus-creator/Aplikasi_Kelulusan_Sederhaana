@@ -61,8 +61,6 @@
 
       const siswa = data.find(
         (item) =>
-          item.nama.toLowerCase().trim() ===
-            namaInput?.toLowerCase().trim() &&
           item.nisn.toString().trim() ===
             nisnInput?.toString().trim()
       );
