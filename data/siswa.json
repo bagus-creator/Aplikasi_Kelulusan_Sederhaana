@@ -1,122 +1,445 @@
 [
-  {
-    "nama": "Ahmad Fauzi",
-    "nisn": "1000000001",
-    "kelas": "XII RPL 1",
-    "status": "LULUS"
-  },
-  {
-    "nama": "Budi Santoso",
-    "nisn": "1000000002",
-    "kelas": "XII RPL 1",
-    "status": "LULUS"
-  },
-  {
-    "nama": "Citra Lestari",
-    "nisn": "1000000003",
-    "kelas": "XII RPL 1",
-    "status": "TIDAK LULUS"
-  },
-  {
-    "nama": "Dewi Anggraini",
-    "nisn": "1000000004",
-    "kelas": "XII RPL 1",
-    "status": "TIDAK LULUS"
-  },
-  {
-    "nama": "Eko Prasetyo",
-    "nisn": "1000000005",
-    "kelas": "XII RPL 1",
-    "status": "LULUS"
-  },
-  {
-    "nama": "Farhan Maulana",
-    "nisn": "1000000006",
-    "kelas": "XII RPL 2",
-    "status": "LULUS"
-  },
-  {
-    "nama": "Gita Permata",
-    "nisn": "1000000007",
-    "kelas": "XII RPL 2",
-    "status": "LULUS"
-  },
-  {
-    "nama": "Hendra Saputra",
-    "nisn": "1000000008",
-    "kelas": "XII RPL 2",
-    "status": "LULUS"
-  },
-  {
-    "nama": "Indah Sari",
-    "nisn": "1000000009",
-    "kelas": "XII RPL 2",
-    "status": "LULUS"
-  },
-  {
-    "nama": "Joko Susilo",
-    "nisn": "1000000010",
-    "kelas": "XII RPL 2",
-    "status": "LULUS"
-  },
-  {
-    "nama": "Kartika Putri",
-    "nisn": "1000000011",
-    "kelas": "XII TKJ 1",
-    "status": "LULUS"
-  },
-  {
-    "nama": "Lukman Hakim",
-    "nisn": "1000000012",
-    "kelas": "XII TKJ 1",
-    "status": "LULUS"
-  },
-  {
-    "nama": "Mega Puspita",
-    "nisn": "1000000013",
-    "kelas": "XII TKJ 1",
-    "status": "LULUS"
-  },
-  {
-    "nama": "Nanda Wijaya",
-    "nisn": "1000000014",
-    "kelas": "XII TKJ 1",
-    "status": "TIDAK LULUS"
-  },
-  {
-    "nama": "Oki Ramadhan",
-    "nisn": "1000000015",
-    "kelas": "XII TKJ 1",
-    "status": "LULUS"
-  },
-  {
-    "nama": "Putri Maharani",
-    "nisn": "1000000016",
-    "kelas": "XII TKJ 2",
-    "status": "LULUS"
-  },
-  {
-    "nama": "Qori Aulia",
-    "nisn": "1000000017",
-    "kelas": "XII TKJ 2",
-    "status": "TIDAK LULUS"
-  },
-  {
-    "nama": "Rizky Pratama",
-    "nisn": "1000000018",
-    "kelas": "XII TKJ 2",
-    "status": "LULUS"
-  },
-  {
-    "nama": "Siti Nurhaliza",
-    "nisn": "1000000019",
-    "kelas": "XII TKJ 2",
-    "status": "LULUS"
-  },
-  {
-    "nama": "Taufik Hidayat",
-    "nisn": "1000000020",
-    "kelas": "XII TKJ 2",
-    "status": "LULUS"
-  }
+{
+"no": 1,
+"nama": "Abdu Syakir Hidayat",
+"nipd": "4056",
+"jk": "L",
+"nisn": "0132468482",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "27 Juli 2013",
+"status": "LULUS"
+},
+{
+"no": 2,
+"nama": "Achmad Hafizh Sya'bani",
+"nipd": "4057",
+"jk": "L",
+"nisn": "0137026121",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "28 Juni 2013",
+"status": "LULUS"
+},
+{
+"no": 3,
+"nama": "Afiq Hamiz Ramadani",
+"nipd": "4058",
+"jk": "L",
+"nisn": "0134890468",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "20 Juli 2013",
+"status": "LULUS"
+},
+{
+"no": 4,
+"nama": "Ahza Danish Aprilyan",
+"nipd": "4060",
+"jk": "L",
+"nisn": "0148732896",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "1 April 2014",
+"status": "LULUS"
+},
+{
+"no": 5,
+"nama": "Aisya Farkhana Salma",
+"nipd": "4061",
+"jk": "P",
+"nisn": "0146528594",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "12 Mei 2014",
+"status": "LULUS"
+},
+{
+"no": 6,
+"nama": "Aliva Nuha Zahira",
+"nipd": "5074",
+"jk": "P",
+"nisn": "3130368808",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "30 Desember 2013",
+"status": "LULUS"
+},
+{
+"no": 7,
+"nama": "Alya Zahra Ramadhani",
+"nipd": "4062",
+"jk": "P",
+"nisn": "0139868929",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "17 Juli 2013",
+"status": "LULUS"
+},
+{
+"no": 8,
+"nama": "Arjuna Setya Pramudita",
+"nipd": "4064",
+"jk": "L",
+"nisn": "3134130886",
+"npsn": "20324574",
+"tempat_lahir": "Banyumas",
+"tanggal_lahir": "13 Juli 2013",
+"status": "LULUS"
+},
+{
+"no": 9,
+"nama": "Armita Nabila",
+"nipd": "4065",
+"jk": "P",
+"nisn": "0134491451",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "13 Oktober 2013",
+"status": "LULUS"
+},
+{
+"no": 10,
+"nama": "Asyifaul Husna",
+"nipd": "4066",
+"jk": "P",
+"nisn": "3110489457",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "27 Februari 2014",
+"status": "LULUS"
+},
+
+{
+"no": 11,
+"nama": "Atania Ainun Nadhiffa",
+"nipd": "4067",
+"jk": "P",
+"nisn": "0135181778",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "4 Oktober 2013",
+"status": "LULUS"
+},
+{
+"no": 12,
+"nama": "Carrisa Ramaniya Almuzafi",
+"nipd": "4068",
+"jk": "P",
+"nisn": "0132695176",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "13 Juni 2013",
+"status": "LULUS"
+},
+{
+"no": 13,
+"nama": "Dewi Zahira",
+"nipd": "5230",
+"jk": "P",
+"nisn": "0138360297",
+"npsn": "20324574",
+"tempat_lahir": "Depok",
+"tanggal_lahir": "28 Oktober 2013",
+"status": "LULUS"
+},
+{
+"no": 14,
+"nama": "Febrian Hamzah",
+"nipd": "4069",
+"jk": "L",
+"nisn": "0147767753",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "7 Februari 2014",
+"status": "LULUS"
+},
+{
+"no": 15,
+"nama": "Ghina Apriliyani",
+"nipd": "4070",
+"jk": "P",
+"nisn": "0142589431",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "4 April 2014",
+"status": "LULUS"
+},
+{
+"no": 16,
+"nama": "Ityanul Arzaq",
+"nipd": "4032",
+"jk": "L",
+"nisn": "0128565048",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "30 September 2012",
+"status": "LULUS"
+},
+{
+"no": 17,
+"nama": "Keisha Alya Aziza",
+"nipd": "4071",
+"jk": "P",
+"nisn": "0143119764",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "26 Februari 2014",
+"status": "LULUS"
+},
+{
+"no": 18,
+"nama": "Khuzaifah Al Yamani",
+"nipd": "4072",
+"jk": "L",
+"nisn": "0132725469",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "8 April 2013",
+"status": "LULUS"
+},
+{
+"no": 19,
+"nama": "Mentari Damayanti",
+"nipd": "4073",
+"jk": "P",
+"nisn": "0138506014",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "2 Agustus 2014",
+"status": "LULUS"
+},
+{
+"no": 20,
+"nama": "Muhamad Afdhil Zuhda Mubarki",
+"nipd": "4078",
+"jk": "L",
+"nisn": "0138534752",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "7 Oktober 2013",
+"status": "LULUS"
+},
+
+{
+"no": 21,
+"nama": "Muhamad Alvin Arzaq",
+"nipd": "4075",
+"jk": "L",
+"nisn": "0134870492",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "13 September 2013",
+"status": "LULUS"
+},
+{
+"no": 22,
+"nama": "Muhamad Ilham Barzan",
+"nipd": "4080",
+"jk": "L",
+"nisn": "0128835236",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "23 Desember 2012",
+"status": "LULUS"
+},
+{
+"no": 23,
+"nama": "Muhammad Adabi Al Fiza",
+"nipd": "4076",
+"jk": "L",
+"nisn": "0149553792",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "16 Agustus 2014",
+"status": "LULUS"
+},
+{
+"no": 24,
+"nama": "Muhammad Aditiya Ramadani",
+"nipd": "4077",
+"jk": "L",
+"nisn": "0131798013",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "11 Juli 2013",
+"status": "LULUS"
+},
+{
+"no": 25,
+"nama": "Muhammad Ilham",
+"nipd": "4038",
+"jk": "L",
+"nisn": "0123208819",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "20 November 2012",
+"status": "LULUS"
+},
+{
+"no": 26,
+"nama": "Muhammad Khilmi Yahya",
+"nipd": "4081",
+"jk": "L",
+"nisn": "0139129798",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "29 November 2013",
+"status": "LULUS"
+},
+{
+"no": 27,
+"nama": "Muhammad Razuni Fadli",
+"nipd": "4082",
+"jk": "L",
+"nisn": "0149213847",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "20 Maret 2013",
+"status": "LULUS"
+},
+{
+"no": 28,
+"nama": "Muhammad Tegar Arjun Naja",
+"nipd": "4040",
+"jk": "L",
+"nisn": "3121273097",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "27 Juni 2012",
+"status": "LULUS"
+},
+{
+"no": 29,
+"nama": "Naora Tri Amelia",
+"nipd": "4083",
+"jk": "P",
+"nisn": "3137935699",
+"npsn": "20324574",
+"tempat_lahir": "Jakarta",
+"tanggal_lahir": "20 November 2013",
+"status": "LULUS"
+},
+{
+"no": 30,
+"nama": "Nihayatu Sa'ada",
+"nipd": "4085",
+"jk": "P",
+"nisn": "0148272100",
+"npsn": "20324574",
+"tempat_lahir": "Musi Rawas",
+"tanggal_lahir": "30 Juni 2014",
+"status": "LULUS"
+},
+
+{
+"no": 31,
+"nama": "Nofa Laeli Sania",
+"nipd": "4086",
+"jk": "P",
+"nisn": "0121713358",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "17 November 2012",
+"status": "LULUS"
+},
+{
+"no": 32,
+"nama": "Nudiya Faizatus Shiyam",
+"nipd": "4087",
+"jk": "P",
+"nisn": "0139306860",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "2 Agustus 2013",
+"status": "LULUS"
+},
+{
+"no": 33,
+"nama": "Nur Khasbi Tegar Pratama",
+"nipd": "3992",
+"jk": "L",
+"nisn": "0114812284",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "18 Desember 2011",
+"status": "LULUS"
+},
+{
+"no": 34,
+"nama": "Nurul Hidayah Auliya",
+"nipd": "4088",
+"jk": "P",
+"nisn": "0135834022",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "12 Oktober 2013",
+"status": "LULUS"
+},
+{
+"no": 35,
+"nama": "Rafa Pradana Arifudin",
+"nipd": "4089",
+"jk": "L",
+"nisn": "0139236326",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "15 November 2013",
+"status": "LULUS"
+},
+{
+"no": 36,
+"nama": "Rania Azelialael",
+"nipd": "4090",
+"jk": "P",
+"nisn": "0131303193",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "11 November 2013",
+"status": "LULUS"
+},
+{
+"no": 37,
+"nama": "Siti Khodijah",
+"nipd": "4091",
+"jk": "P",
+"nisn": "0137289639",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "4 November 2013",
+"status": "LULUS"
+},
+{
+"no": 38,
+"nama": "Syafa Mitamaylinda Rizqi",
+"nipd": "4092",
+"jk": "P",
+"nisn": "0134955674",
+"npsn": "20324574",
+"tempat_lahir": "Bogor",
+"tanggal_lahir": "12 Mei 2013",
+"status": "LULUS"
+},
+{
+"no": 39,
+"nama": "Tryas Fasya Maudya",
+"nipd": "4093",
+"jk": "L",
+"nisn": "0136207268",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "19 Mei 2013",
+"status": "LULUS"
+},
+{
+"no": 40,
+"nama": "Zahira Nurrahmi Fajriyana",
+"nipd": "4095",
+"jk": "P",
+"nisn": "0136009551",
+"npsn": "20324574",
+"tempat_lahir": "Pemalang",
+"tanggal_lahir": "17 Februari 2013",
+"status": "LULUS"
+}
 ]
